@@ -1,0 +1,289 @@
+:root {
+/* fonts */
+--Roboto-Condesed: 'Roboto Condensed', sans-serif;
+--Roboto:'Roboto', sans-serif;
+
+/* colors */
+--black: #000000;
+--cinza-claro: #f1f1f1;
+--cinza-medio: #999;
+--cinza-escuro: #444;
+--azul-escuro: #005377;
+--azul-marinho: #052F5F;
+--verde: #06A77D;
+--bege: #D5C67A;
+--laranja: #F1A208;
+
+/* gradients */
+--fundo-grad: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+--bg-branco-grad: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+--bg-esmeralda: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
+--bg-pordosol: linear-gradient(120deg, #d299c2 0%, #fef9d7 100%);
+}
+
+
+/*** default - boot ***/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+    background: var(--fundo-grad);
+}
+
+a {
+    text-decoration: none;
+}               
+
+ul {
+    list-style-type: none;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+.center {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+
+/* boot width */
+
+.w33 {
+    width: 32%;
+    padding: 0 2%;
+}
+
+.w67 {
+    width: 66%;
+    padding: 0 2%;
+}
+
+.w50 {
+    width: 49%;
+    padding: 0 2%;    
+}
+
+.w100 {
+    width: 100%;
+    padding: 0 2%;    
+}
+
+.mostrar {
+    transition: 1s;
+    display: block;
+    height: auto;
+}
+
+.sumir {
+    transition: 1s;
+    display: none;
+    height: 0px;
+}
+
+.aparecer {
+    display: inline-block !important;
+}
+
+
+/* body */
+
+/* header */
+
+.menu-bar {
+    display: none;
+}
+
+.logo h2{
+    padding: 20px 0%;
+    display: block;
+    font-family: var(--Roboto);
+    font-size: 30px;
+    font-weight: 200;
+    margin-left: 20px;
+}
+
+.logo h2 span {
+    font-weight: 300;
+}
+
+.menu-desk {
+    display: inline-block;
+    padding-top: 30px;
+}
+
+.menu-desk ul {
+    display: flex;
+}
+
+.menu-desk ul a {
+    padding: 25px;
+    font-family: var(--Roboto);
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--black);
+}
+
+.conteudo-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* section capa */
+
+section .conteudo-capa {
+    width: 100%;
+    padding: 40vh 10%;
+    text-align: center;
+}
+
+.conteudo-capa h2 {
+    font-family: var(--Roboto-Condesed);
+    font-size: 50px;
+    font-weight: 500;
+}
+
+.conteudo-capa h3 {
+    font-family: var(--Roboto);
+    font-size: 25px;
+    font-weight: 300;
+}
+
+
+section .content-work {
+    background: var(--bg-pordosol);
+    width: 100%;
+    padding: 60px 0;
+    border-radius: 50px;
+    display: inline-flex;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.content-work .box-work {
+    padding: 50px 0;
+    
+}
+
+.content-work .box-work h2 {
+    font-family: var(--Roboto-Condesed);
+    font-weight: 500;
+    font-size: 40px;
+    
+}
+
+.content-work .box-work i {
+    font-size: 100px;
+}
+
+.content-work .box-work .describe {
+    background-color: rgba(152, 180, 255, 0.5);
+    padding: 50px 0;
+    margin: 4% 5%;
+    border-radius: 30px;
+}
+
+.content-work .box-work .describe p {
+    font-family: var(--Roboto);
+    font-size: 18px;
+    font-weight: 400;
+    padding: 0 2%;
+    display: none;
+}
+
+.content-work .box-work .describe h3 {
+    font-family: var(--Roboto-Condesed);
+    font-size: 28px;
+    font-weight: 800;
+    padding-bottom: 20px;
+    cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 740px){
+
+    .menu-desk {
+        display: none;
+        float: right;
+    }
+
+    .conteudo-header{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+   
+    .menu-bar {
+        display: block!important;
+        font-size: 25px;
+        padding: 25px 5%;
+        transition: 1s;
+    }
+
+    header {
+        justify-content: space-between;
+    }
+
+    .menu {
+        background: var(--bg-branco-grad);
+        text-align: center;
+        transition: 1s;
+
+    }
+    
+    .menu li {
+        padding: 15px;
+        cursor: pointer;
+        border-bottom: 1px solid var(--cinza-medio);
+    }
+    
+    .menu li a {
+        color: var(--cinza-escuro);
+        font-family: var(--Roboto);
+
+    }
+
+    .content-work {
+        display: inline-block!important;
+    }
+
+    .w33 {
+        width: 100%!important;
+
+    }
+
+    .content-work .box-work {
+        padding: 100px 0!important;
+    }
+
+}
+
+@media screen and (max-width: 320px){
+    .menu-bar {
+        margin: 0 auto;
+    }
+}
